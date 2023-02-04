@@ -35,6 +35,8 @@ namespace D3D11_APP
 		Microsoft::WRL::ComPtr<ID3D11Buffer>		m_indexBuffer;
 		Microsoft::WRL::ComPtr<ID3D11VertexShader>	m_vertexShader0;
 		Microsoft::WRL::ComPtr<ID3D11PixelShader>	m_pixelShader0;
+		Microsoft::WRL::ComPtr<ID3D11PixelShader>	m_pixelShader1;
+		Microsoft::WRL::ComPtr<ID3D11PixelShader>	m_pixelShader2;
 		Microsoft::WRL::ComPtr<ID3D11Buffer>		m_constantBuffer;
 
 		// System resources for cube geometry.

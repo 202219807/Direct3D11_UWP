@@ -21,9 +21,11 @@ PixelShaderInput main(VertexShaderInput input)
 {
 	PixelShaderInput output;
     float3 inPos = input.pos;
-    inPos.xyz *= float3(8.0f, 0.01f, 4.0f);
-    inPos.y -= 1.0f;
-    inPos.z -= 2.0f;
+	
+    float r = 1.0f;
+    inPos.x = r * sin(input.pos.y) * cos(input.pos.x);
+    inPos.y = r * sin(input.pos.y) * sin(input.pos.x);
+    inPos.z = r * cos(input.pos.y);
     float4 pos = float4(inPos, 1.0f);
 
 	pos = mul(pos, model);
